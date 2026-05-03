@@ -275,4 +275,143 @@
     color: rgba(245,237,224,0.4);
     line-height: 1.7;
   }
-  footer span​​​​​​​​​​​​​​​​
+  footer span { color: var(--terra-light); }
+  .fade-in { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease, transform 0.6s ease; }
+  .fade-in.visible { opacity: 1; transform: translateY(0); }
+  @media (max-width: 500px) {
+    .hero { padding: 48px 24px 40px; }
+    .wrap { padding: 0 18px; }
+    .phone-btn { padding: 16px 18px; }
+    .phone-btn .num { font-size: 18px; }
+    .pickup-card { flex-direction: column; gap: 10px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="tape">⏰ &nbsp; Moving June 1st &nbsp;·&nbsp; San Diego &nbsp;·&nbsp; We are begging you &nbsp; ⏰</div>
+
+<div class="hero">
+  <div class="hero-tag">Furniture SOS · Est. Moving Day June 1st</div>
+  <h1>Our Apartment<br>is <span class="italic">completely</span><br>Empty.</h1>
+  <p class="hero-desc">Not "minimalist." Not "we like open space."<br>Just… nothing. Echoes. A single overhead light<br>judging us from the ceiling.</p>
+  <span class="hero-emoji">🛋️</span>
+</div>
+
+<div class="wrap">
+
+  <div class="situation fade-in">
+    <div class="section-eyebrow">The situation</div>
+    <p>We're moving into a <strong>fully unfurnished apartment on June 1st</strong> in San Diego and we need your help. If you have anything — furniture, gear, random stuff from the garage — that you've been meaning to deal with for literally years, we will take it. <strong>Cheap, free, or "just come get it before I change my mind."</strong> All valid.</p>
+    <div class="callout-box">
+      Got something you've been stepping over for 3 years?<br>
+      <strong>Congratulations. That's our couch now.</strong>
+    </div>
+  </div>
+
+  <div class="categories fade-in">
+    <div class="section-eyebrow">What we'll take (genuinely, anything)</div>
+    <div class="cat-section">
+      <div class="cat-label">🛋️ &nbsp; The Obvious Stuff</div>
+      <div class="tag-row">
+        <div class="tag"><span class="e">🛋️</span> Sofas & Sectionals</div>
+        <div class="tag"><span class="e">🪑</span> Chairs (any decade)</div>
+        <div class="tag"><span class="e">🛏️</span> Bed Frames & Mattresses</div>
+        <div class="tag"><span class="e">🪞</span> Dressers & Mirrors</div>
+        <div class="tag"><span class="e">📦</span> Shelves & Bookcases</div>
+        <div class="tag"><span class="e">🍽️</span> Dining Tables</div>
+        <div class="tag"><span class="e">🗄️</span> Desks & Office Stuff</div>
+        <div class="tag"><span class="e">💡</span> Lamps & Lighting</div>
+        <div class="tag"><span class="e">🪴</span> Side Tables & Plant Stands</div>
+        <div class="tag"><span class="e">🛁</span> Bathroom Stuff</div>
+      </div>
+    </div>
+    <div class="cat-section">
+      <div class="cat-label">🌊 &nbsp; Outdoor & Adventure Gear</div>
+      <div class="tag-row">
+        <div class="tag"><span class="e">🏄</span> Surfboards</div>
+        <div class="tag"><span class="e">🏂</span> Snowboards & Bindings</div>
+        <div class="tag"><span class="e">⛷️</span> Skis & Poles</div>
+        <div class="tag"><span class="e">⛺</span> Tents & Camping Gear</div>
+        <div class="tag"><span class="e">🎒</span> Backpacks & Hiking Gear</div>
+        <div class="tag"><span class="e">🚵</span> Bikes & Scooters</div>
+        <div class="tag"><span class="e">🛶</span> Kayaks / Paddleboards</div>
+        <div class="tag"><span class="e">🏕️</span> Sleeping Bags & Pads</div>
+        <div class="tag"><span class="e">🔦</span> Camping Gadgets</div>
+        <div class="tag"><span class="e">🧗</span> Climbing Gear</div>
+      </div>
+    </div>
+    <div class="cat-section">
+      <div class="cat-label">🧸 &nbsp; The Random & Wonderful</div>
+      <div class="tag-row">
+        <div class="tag"><span class="e">🧱</span> Legos (yes, all of them)</div>
+        <div class="tag"><span class="e">🎸</span> Instruments</div>
+        <div class="tag"><span class="e">🎮</span> Gaming Stuff</div>
+        <div class="tag"><span class="e">📺</span> TVs & Electronics</div>
+        <div class="tag"><span class="e">🍳</span> Kitchen Appliances</div>
+        <div class="tag"><span class="e">📚</span> Books & Art</div>
+        <div class="tag"><span class="e">🧩</span> Board Games</div>
+        <div class="tag"><span class="e">🪴</span> Plants</div>
+        <div class="tag"><span class="e">🏋️</span> Workout Equipment</div>
+        <div class="tag"><span class="e">🤷</span> Literally Anything Else</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="disclaimer fade-in">
+    <p class="big-quote">Wobbly leg? Faded fabric? Smells a little<br>like <em>"character"</em>?</p>
+    <p class="fine-print">We genuinely do not care. We are not in a financial position to have standards right now.<br>Cheap or free — both make us cry actual tears of joy.<br>If it existed in a home at some point, we want it. That's it. That's the bar.</p>
+  </div>
+
+  <div class="pickup-section fade-in">
+    <div class="pickup-card">
+      <span class="icon">🚗</span>
+      <div>
+        <h3>We Will Come Pick It Up!</h3>
+        <p>Zero effort on your end. You point at the thing, we take the thing, we thank you like you just saved our lives (because you did). Truck-optional but enthusiasm guaranteed. San Diego area — just say when.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="contact fade-in">
+    <div class="contact-head">
+      <h2>Send Us Your<br>Pics & Vids 📸</h2>
+      <p>Tap a number — opens a text directly. We respond fast. We are very motivated.</p>
+    </div>
+    <div class="phone-stack">
+      <a class="phone-btn" href="sms:+15613764309">
+        <span class="num-wrap">
+          <span class="contact-name">Ella</span>
+          <span class="num">(561) 376-4309</span>
+        </span>
+        <span class="cta-pill">Tap to Text</span>
+      </a>
+      <a class="phone-btn" href="sms:+13032106636">
+        <span class="num-wrap">
+          <span class="contact-name">Emma</span>
+          <span class="num">(303) 210-6636</span>
+        </span>
+        <span class="cta-pill">Tap to Text</span>
+      </a>
+    </div>
+    <p class="media-note">Photos, videos, voice memos rambling about the item — all welcome.<br>Blurry photos in bad lighting? Same. We'll take it.</p>
+  </div>
+
+</div>
+
+<footer>
+  You are literally helping us build a home &amp; we will think about you<br>
+  <span>every single time we sit on that couch. 🙏</span>
+</footer>
+
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); }
+    });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
