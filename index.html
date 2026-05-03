@@ -31,7 +31,6 @@ font-family: ‘Lora’, Georgia, serif;
 -webkit-font-smoothing: antialiased;
 }
 
-/* ─── NOISE TEXTURE OVERLAY ─── */
 body::before {
 content: ‘’;
 position: fixed;
@@ -42,7 +41,6 @@ z-index: 9999;
 opacity: 0.5;
 }
 
-/* ─── TOP TAPE ─── */
 .tape {
 background: var(–terra);
 color: #fff;
@@ -57,7 +55,6 @@ top: 0;
 z-index: 100;
 }
 
-/* ─── HERO ─── */
 .hero {
 background: var(–dark);
 padding: 64px 32px 56px;
@@ -128,14 +125,12 @@ animation: float 3.5s ease-in-out infinite;
 50% { transform: translateY(-10px) rotate(2deg); }
 }
 
-/* ─── WRAPPER ─── */
 .wrap {
 max-width: 680px;
 margin: 0 auto;
 padding: 0 24px;
 }
 
-/* ─── SITUATION ─── */
 .situation {
 padding: 52px 0 40px;
 border-bottom: 1px solid var(–rule);
@@ -187,7 +182,6 @@ font-style: normal;
 color: var(–terra-light);
 }
 
-/* ─── CATEGORIES ─── */
 .categories {
 padding: 44px 0;
 border-bottom: 1px solid var(–rule);
@@ -242,7 +236,6 @@ box-shadow: 0 4px 12px rgba(200,81,42,0.12);
 
 .tag .e { font-size: 15px; }
 
-/* ─── DISCLAIMER ─── */
 .disclaimer {
 padding: 40px 0;
 border-bottom: 1px solid var(–rule);
@@ -274,7 +267,6 @@ font-style: italic;
 line-height: 1.7;
 }
 
-/* ─── PICKUP ─── */
 .pickup-section {
 padding: 40px 0;
 border-bottom: 1px solid var(–rule);
@@ -307,7 +299,6 @@ color: #3d5e40;
 line-height: 1.65;
 }
 
-/* ─── CONTACT ─── */
 .contact {
 padding: 48px 0 56px;
 }
@@ -367,6 +358,22 @@ border-radius: 14px;
 .phone-btn:hover { transform: translateY(-2px); }
 .phone-btn:active { transform: translateY(0); }
 
+.num-wrap {
+display: flex;
+flex-direction: column;
+gap: 2px;
+position: relative;
+z-index: 1;
+}
+
+.contact-name {
+font-family: ‘DM Mono’, monospace;
+font-size: 10px;
+letter-spacing: 2px;
+text-transform: uppercase;
+color: var(–terra-light);
+}
+
 .phone-btn .num {
 font-family: ‘Syne’, sans-serif;
 font-size: 22px;
@@ -401,7 +408,6 @@ color: var(–warm-mid);
 line-height: 1.6;
 }
 
-/* ─── FOOTER ─── */
 footer {
 background: var(–dark);
 text-align: center;
@@ -414,7 +420,6 @@ line-height: 1.7;
 
 footer span { color: var(–terra-light); }
 
-/* ─── ANIMATIONS ─── */
 .fade-in {
 opacity: 0;
 transform: translateY(20px);
@@ -425,7 +430,6 @@ opacity: 1;
 transform: translateY(0);
 }
 
-/* ─── MOBILE ─── */
 @media (max-width: 500px) {
 .hero { padding: 48px 24px 40px; }
 .wrap { padding: 0 18px; }
@@ -439,8 +443,6 @@ transform: translateY(0);
 <body>
 
 <div class="tape">⏰ &nbsp; Moving June 1st &nbsp;·&nbsp; San Diego &nbsp;·&nbsp; We are begging you &nbsp; ⏰</div>
-
-<!-- HERO -->
 
 <div class="hero">
   <div class="hero-tag">Furniture SOS · Est. Moving Day June 1st</div>
@@ -456,11 +458,7 @@ transform: translateY(0);
   <span class="hero-emoji">🛋️</span>
 </div>
 
-<!-- BODY -->
-
 <div class="wrap">
-
-  <!-- SITUATION -->
 
   <div class="situation fade-in">
     <div class="section-eyebrow">The situation</div>
@@ -472,8 +470,6 @@ transform: translateY(0);
       <strong>Congratulations. That's our couch now.</strong>
     </div>
   </div>
-
-  <!-- CATEGORIES -->
 
   <div class="categories fade-in">
     <div class="section-eyebrow">What we'll take (genuinely, anything)</div>
@@ -530,8 +526,6 @@ transform: translateY(0);
 
   </div>
 
-  <!-- DISCLAIMER -->
-
   <div class="disclaimer fade-in">
     <p class="big-quote">
       Wobbly leg? Faded fabric? Smells a little<br>
@@ -543,8 +537,6 @@ transform: translateY(0);
       If it existed in a home at some point, we want it. That's it. That's the bar.
     </p>
   </div>
-
-  <!-- PICKUP -->
 
   <div class="pickup-section fade-in">
     <div class="pickup-card">
@@ -560,8 +552,6 @@ transform: translateY(0);
     </div>
   </div>
 
-  <!-- CONTACT -->
-
   <div class="contact fade-in">
     <div class="contact-head">
       <h2>Send Us Your<br>Pics & Vids 📸</h2>
@@ -569,11 +559,17 @@ transform: translateY(0);
     </div>
     <div class="phone-stack">
       <a class="phone-btn" href="sms:+15613764309">
-        <span class="num">(561) 376-4309</span>
+        <span class="num-wrap">
+          <span class="contact-name">Ella</span>
+          <span class="num">(561) 376-4309</span>
+        </span>
         <span class="cta-pill">Tap to Text</span>
       </a>
       <a class="phone-btn" href="sms:+13032106636">
-        <span class="num">(303) 210-6636</span>
+        <span class="num-wrap">
+          <span class="contact-name">Emma</span>
+          <span class="num">(303) 210-6636</span>
+        </span>
         <span class="cta-pill">Tap to Text</span>
       </a>
     </div>
@@ -583,7 +579,7 @@ transform: translateY(0);
     </p>
   </div>
 
-</div><!-- /wrap -->
+</div>
 
 <footer>
   You are literally helping us build a home &amp; we will think about you<br>
@@ -591,7 +587,6 @@ transform: translateY(0);
 </footer>
 
 <script>
-  // Fade in on scroll
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(e => {
       if (e.isIntersecting) {
