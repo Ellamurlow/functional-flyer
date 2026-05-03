@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>QR Code — Furniture Wanted</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Lora:ital,wght@0,400;0,600;1,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+  body {
+    background: #f5ede0 !important;
+    font-family: 'Lora', Georgia, serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 48px 24px;
+    -webkit-font-smoothing: antialiased;
+  }
+  .page-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #c8512a !important;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  h1 {
+    font-family: 'Syne', sans-serif;
+    font-size: clamp(28px, 6vw, 42px);
+    font-weight: 800;
+    color: #1c1207 !important;
+    text-align: center;
+    letter-spacing: -1px;
+    line-height: 1.05;
+    margin-bottom: 8px;
+  }
+  .subtitle {
+    font-size: 15px;
+    font-style: italic;
+    color: #8c6a4a !important;
+    text-align: center;
+    margin-bottom: 48px;
+    line-height: 1.6;
+  }
+  .card {
+    background: #faf5ed !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    border: 2px solid #d4c0a8;
+    border-radius: 20px;
+    padding: 36px 32px 28px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    max-width: 300px;
+    width: 100%;
+    box-shadow: 0 8px 32px rgba(28,18,7,0.08);
+  }
+  .card-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #c8512a !important;
+    background: rgba(200,81,42,0.08) !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    border: 1px solid rgba(200,81,42,0.2);
+    padding: 4px 12px;
+    border-radius: 50px;
+  }
+  .qr-wrap {
+    background: #ffffff !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    border-radius: 14px;
+    padding: 16px;
+    border: 1.5px solid #d4c0a8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .divider {
+    width: 40px;
+    height: 2px;
+    background: repeating-linear-gradient(90deg, #c8512a 0, #c8512a 6px, transparent 6px, transparent 10px) !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    border-radius: 2px;
+  }
+  .scan-hint {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #8c6a4a !important;
+    text-align: center;
+  }
+  .open-btn {
+    display: block;
+    background: #1c1207 !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    color: #f5ede0 !important;
+    font-family: 'Syne', sans-serif;
+    font-weight: 800;
+    font-size: 15px;
+    text-decoration: none;
+    padding: 14px 32px;
+    border-radius: 50px;
+    transition: background 0.2s, transform 0.15s;
+    width: 100%;
+    text-align: center;
+  }
+  .open-btn:hover { background: #c8512a !important; transform: translateY(-2px); }
+  .footer-note {
+    margin-top: 36px;
+    text-align: center;
+    font-size: 13px;
+    font-style: italic;
+    color: #8c6a4a !important;
+    line-height: 1.7;
+  }
+  .footer-note strong { color: #c8512a !important; font-style: normal; }
+  @media print {
+    body { padding: 20px; }
+    .card { box-shadow: none; }
+  }
+</style>
+</head>
+<body>
+<div class="page-label">Scan to See Our Flyer</div>
+<h1>Furniture Wanted 🛋️</h1>
+<p class="subtitle">Scan to open our full flyer —<br>tap our numbers to text us directly.</p>
+<div class="card">
+  <div class="card-label">Scan Me</div>
+  <div class="qr-wrap" id="qr"></div>
+  <div class="divider"></div>
+  <div class="scan-hint">Opens our flyer on your phone</div>
+  <a class="open-btn" href="https://ellamurlow.github.io/functional-flyer/" target="_blank">Open Flyer</a>
+</div>
+<p class="footer-note">Moving <strong>June 1st · San Diego</strong><br>Cheap, free, or "just come get it" — all welcome. 🙏</p>
+<script>
+  new QRCode(document.getElementById("qr"), {
+    text: "https://ellamurlow.github.io/functional-flyer/",
+    width: 200,
+    height: 200,
+    colorDark: "#1c1207",
+    colorLight: "#ffffff",
+    correctLevel: QRCode.CorrectLevel.M
+  });
+</script>
+</body>
+</html>
